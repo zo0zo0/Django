@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/style_products.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="leftHeader">
+                <img src="/static/img/logo.png" alt="">
+                <img class="searchIcon" src="/static/img/search.png" alt="">
+            </div>
+
+            <div class="rightHeader">
+                        <a href="/" class="block_href1"><img src="/static/img/Circles.png" alt="Main Page"></a>
+                        <a href="/products/" class="block_href1"><img height="40px" width="40px" src="/static/img/shops.png" alt="Shop"></a>
+                        <a href="/contacts/" class="block_href2"><img src="/static/img/contacts.png" alt="Contacts"></a>
+
+                <span class="cartIconWrap">
+                    <img class="cartIcon" src="/static/img/cart.png" alt="">
+                    <span>0</span>
+                </span>
+
+                <div class="basket hidden">
+                    <div class="basketLine basketHeader">
+                        <div>Название товара</div>
+                        <div>Количество</div>
+                        <div>Цена за шт.</div>
+                        <div>Итого</div>
+                    </div>
+
+                    <div class="basketTotal">
+                        Товаров в корзине на сумму:
+                        $<span class="basketTotalValue">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newArrivals">
+        <div class="container">
+            <h1>NEW ARRIVALS</h1>
+            <nav>
+                <a href="#">HOME</a>
+                <span>/</span>
+                <a href="#">MEN</a>
+                <span>/</span>
+                <a href="#">NEW ARRIVALS</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="filters">
+        <div class="container">
+            <div class="filtersLeft">
+                <span class="filterLabel">FILTER</span>
+                <img class="filterIcon" src="/static/img/filter.svg" alt="">
+                <div class="filterPopup hidden">
+                    <nav class="filterCategory">
+                        <div class="filterCategoryHeader">CATEGORY</div>
+                        <div class="hidden">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Polos</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Sweaters & Knits</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Tanks</a>
+                        </div>
+                    </nav>
+                    <nav class="filterCategory">
+                        <div class="filterCategoryHeader">BRAND</div>
+                        <div class="hidden">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Polos</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Sweaters & Knits</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Tanks</a>
+                        </div>
+                    </nav>
+                    <nav class="filterCategory">
+                        <div class="filterCategoryHeader">DESIGNER</div>
+                        <div class="hidden">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Polos</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Sweaters & Knits</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Tanks</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="filtersRight">
+                <div class="filterTrending">
+                    TRENDING NOW
+                    <img src="/static/img/filterArrow.svg" alt="">
+                </div>
+                <div class="filterSize">
+                    <div class="filterSizeWrap">
+                        SIZE
+                        <img src="/static/img/filterArrow.svg" alt="">
+                    </div>
+                    <div class="filterSizes hidden">
+                        <div>
+                            <input type="checkbox"> XS
+                        </div>
+                        <div>
+                            <input type="checkbox"> S
+                        </div>
+                        <div>
+                            <input type="checkbox"> M
+                        </div>
+                        <div>
+                            <input type="checkbox"> L
+                        </div>
+                    </div>
+                </div>
+                <div class="filterPrice">
+                    PRICE
+                    <img src="/static/img/filterArrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured container">
+        <h2 class="featuredHeader">Fetured Items</h2>
+        <div class="featuredTitle">Shop for items based on what we featured in this week</div>
+
+        <div class="featuredItems">
+            <div class="featuredItem">
+                <div class="featuredImgWrap">
+                    <img src="/static/img/featured/1.jpg" alt="Product 1">
+                    <div class="featuredImgDark">
+                        <button data-productId="1">
+                            <img src="/static/img/cart.svg" alt="">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featuredData">
+                    <div class="featuredName">
+                        Product 1
+                    </div>
+                    <div class="featuredText">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                    </div>
+                    <div class="featuredPrice">
+                        44.15
+                    </div>
+                </div>
+            </div>
+
+            <div class="featuredItem">
+                <div class="featuredImgWrap">
+                    <img src="/static/img/featured/2.jpg" alt="Product 2">
+                    <div class="featuredImgDark">
+                        <button data-productId="2">
+                            <img src="/static/img/cart.svg" alt="">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featuredData">
+                    <div class="featuredName">
+                        Product 2
+                    </div>
+                    <div class="featuredText">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                    </div>
+                    <div class="featuredPrice">
+                        97.34
+                    </div>
+                </div>
+            </div>
+
+            <div class="featuredItem">
+                <div class="featuredImgWrap">
+                    <img src="/static/img/featured/3.jpg" alt="Product 3">
+                    <div class="featuredImgDark">
+                        <button data-productId="3">
+                            <img src="/static/img/cart.svg" alt="">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featuredData">
+                    <div class="featuredName">
+                        Product 3
+                    </div>
+                    <div class="featuredText">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                    </div>
+                    <div class="featuredPrice">
+                        78.22
+                    </div>
+                </div>
+            </div>
+
+            <div class="featuredItem">
+                <div class="featuredImgWrap">
+                    <img src="/static/img/featured/4.jpg" alt="Product 4">
+                    <div class="featuredImgDark">
+                        <button data-productId="4">
+                            <img src="/static/img/cart.svg" alt="">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featuredData">
+                    <div class="featuredName">
+                        Product 4
+                    </div>
+                    <div class="featuredText">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                    </div>
+                    <div class="featuredPrice">
+                        32.11
+                    </div>
+                </div>
+            </div>
+
+            <div class="featuredItem">
+                <div class="featuredImgWrap">
+                    <img src="/static/img/featured/5.jpg" alt="Product 5">
+                    <div class="featuredImgDark">
+                        <button data-productId="5">
+                            <img src="/static/img/cart.svg" alt="">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featuredData">
+                    <div class="featuredName">
+                        Product 5
+                    </div>
+                    <div class="featuredText">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                    </div>
+                    <div class="featuredPrice">
+                        54.66
+                    </div>
+                </div>
+            </div>
+
+            <div class="featuredItem">
+                <div class="featuredImgWrap">
+                    <img src="/static/img/featured/6.jpg" alt="Product 6">
+                    <div class="featuredImgDark">
+                        <button data-productId="6">
+                            <img src="/static/img/cart.svg" alt="">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featuredData">
+                    <div class="featuredName">
+                        Product 6
+                    </div>
+                    <div class="featuredText">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa.
+                    </div>
+                    <div class="featuredPrice">
+                        11.23
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pagination">
+            <a href="#">
+                <img src="/static/img/chevronLeft.svg" alt="">
+            </a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6.....20</a>
+            <a href="#">
+                <img src="/static/img/chevronRight.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="container">
+
+            <div class="serivceUnit">
+                <img src="/static/img/services/delivery.svg" alt="">
+                <div class="servicesTitle">
+                    Free Delivery
+                </div>
+                <div class="servicesText">
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </div>
+            </div>
+
+            <div class="serivceUnit">
+                <img src="/static/img/services/discount.svg" alt="">
+                <div class="servicesTitle">
+                    Sales & discounts
+                </div>
+                <div class="servicesText">
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </div>
+            </div>
+
+            <div class="serivceUnit">
+                <img src="/static/img/services/assurance.svg" alt="">
+                <div class="servicesTitle">
+                    Quality assurance
+                </div>
+                <div class="servicesText">
+                    Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <div class="container">
+
+            <div class="subscribeLeft">
+                <img src="/static/img/subscribeUser.png" alt="">
+                <div class="subscribeUserText">
+                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+                </div>
+            </div>
+
+            <div class="subscribeRight">
+                <div class="subscribeTitle">
+                    SUBSCRIBE
+                </div>
+                <div class="subscribeText">
+                    FOR OUR NEWLETTER AND PROMOTION
+                </div>
+                <form action="" class="subscribeForm">
+                    <input type="text" placeholder="Enter Your Email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footerLeft">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="footerRight">
+                &copy; 2021 Brand All Rights Reserved.
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+    <script src="/basket.js"></script>
+</body>
+
+</html>
