@@ -1,8 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
+from mainapp.models import Product
+
+
 def main(requests):
-    return render(requests, 'mainapp/index.html')
+    title = 'Главная'
+    products = Product.object.all()
+    content = {"title": title, 'products': products}
+    return render(requests, 'mainapp/index.html', content)
 
 def products(requests):
     return render(requests, 'mainapp/products.html')
