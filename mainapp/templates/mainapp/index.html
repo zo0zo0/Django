@@ -1,15 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
-
-<!-- fd gfegefgeg -->
 
 
 
@@ -19,9 +18,7 @@
             <div class="topheader">
                 <div class="header">
                     <div class="topmenu">
-                        <a href="/" class="block_href1"><img src="/static/img/Circles.png" alt="Main Page"></a>
-                        <a href="/products/" class="block_href1"><img height="40px" width="40px" src="/static/img/shops.png" alt="Shop"></a>
-                        <a href="/contacts/" class="block_href2"><img src="/static/img/contacts.png" alt="Contacts"></a>
+                        {% include 'mainapp/base.html' %}
                     </div>
                     <div class="lastheader">
                         <h1 class="h1class">New Automation
@@ -43,7 +40,7 @@
             </h3>
             <div class="middle">
                 <div class="middledown">
-                    <img class="img" src="/static/img/boy.png" alt="boy">
+                    <img class="img" src="{% static 'img/boy.png' %}" alt="boy">
                     <h4 class="h4class">Третий заголовок моей страницы с h4 и более 5ти словами</h4>
                     <p class="paragraph h4after_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                         porro
@@ -54,7 +51,7 @@
                     <a class="card" href="#">Learn more</a>
                 </div>
                 <div class="middledown">
-                    <img class="img" src="/static/img/girl1.png" alt="boy">
+                    <img class="img" src="{% static 'img/girl1.png' %}" alt="boy">
                     <h4 class="h4class">Третий заголовок моей страницы с h4 и более 5ти словами</h4>
                     <p class="paragraph h4after_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                         porro
@@ -65,7 +62,7 @@
                     <a class="card" href="#">Learn more</a>
                 </div>
                 <div class="middledown">
-                    <img class="img" src="/static/img/girl2.png" alt="boy">
+                    <img class="img" src="{% static 'img/girl2.png' %}" alt="boy">
                     <h4 class="h4class">Третий заголовок моей страницы с h4 и более 5ти словами</h4>
                     <p class="paragraph h4after_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                         porro
@@ -86,14 +83,14 @@
                 reprehenderit aperiam
                 nihil atque enim maiores vel magni nemo porro id labore velit ratione libero, quis fuga doloremque?
             </p>
-            <div class="project__item"><img class="project__img" src="/static/img/Mask1.png" alt="mask1">
+            <div class="project__item"><img class="project__img" src="{% static 'img/Mask1.png' %}" alt="mask1">
                 <p class="project__text">Smart Home Intallation</p>
             </div>
             <div class="project__parent">
-                <div class="project__item"><img class="project__img" src="/static/img/Mask2.png" alt="mask2">
+                <div class="project__item"><img class="project__img" src="{% static 'img/Mask2.png' %}" alt="mask2">
                     <p class="project__text2">Sparklite App</p>
                 </div>
-                <div class="project__item"><img class="project__img" src="/static/img/Mask3.png" alt="mask3">
+                <div class="project__item"><img class="project__img" src="{% static 'img/Mask3.png' %}" alt="mask3">
                     <p class="project__text3">Car-Rapetition App</p>
                 </div>
             </div>
@@ -143,7 +140,7 @@
                         <button class="button" type="submit">Подписаться</button>
                         <button class="button" type="reset">Стереть данные в форме</button>
                         <div class="lessbottom">
-                            <p class="paragraph footer__end"><b>Все права защищены</b> &copy;</p>
+                            <p class="paragraph footer__end"><b>Все права защищены {% now "Y" %} </b> &copy;</p>
                         </div>
                     </form>
                 </div>
