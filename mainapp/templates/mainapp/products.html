@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -8,24 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="/static/style_products.css">
+    <link rel="stylesheet" href="{% static 'style_products.css' %}">
 </head>
 
 <body>
     <div class="header">
         <div class="container">
             <div class="leftHeader">
-                <img src="/static/img/logo.png" alt="">
-                <img class="searchIcon" src="/static/img/search.png" alt="">
+                <img src="{% static 'img/logo.png' %}" alt="">
+                <img class="searchIcon" src="{% static 'img/search.png' %}" alt="">
             </div>
 
             <div class="rightHeader">
-                        <a href="/" class="block_href1"><img src="/static/img/Circles.png" alt="Main Page"></a>
-                        <a href="/products/" class="block_href1"><img height="40px" width="40px" src="/static/img/shops.png" alt="Shop"></a>
-                        <a href="/contacts/" class="block_href2"><img src="/static/img/contacts.png" alt="Contacts"></a>
+                        {% include 'mainapp/base.html' %}
 
                 <span class="cartIconWrap">
-                    <img class="cartIcon" src="/static/img/cart.png" alt="">
+                    <img class="cartIcon" src="{% static 'img/cart.png' %}" alt="">
                     <span>0</span>
                 </span>
 
@@ -63,7 +62,7 @@
         <div class="container">
             <div class="filtersLeft">
                 <span class="filterLabel">FILTER</span>
-                <img class="filterIcon" src="/static/img/filter.svg" alt="">
+                <img class="filterIcon" src="{% static 'img/filter.svg' %}" alt="">
                 <div class="filterPopup hidden">
                     <nav class="filterCategory">
                         <div class="filterCategoryHeader">CATEGORY</div>
@@ -118,12 +117,12 @@
             <div class="filtersRight">
                 <div class="filterTrending">
                     TRENDING NOW
-                    <img src="/static/img/filterArrow.svg" alt="">
+                    <img src="{% static 'img/filterArrow.svg' %}" alt="">
                 </div>
                 <div class="filterSize">
                     <div class="filterSizeWrap">
                         SIZE
-                        <img src="/static/img/filterArrow.svg" alt="">
+                        <img src="{% static 'img/filterArrow.svg' %}" alt="">
                     </div>
                     <div class="filterSizes hidden">
                         <div>
@@ -142,7 +141,7 @@
                 </div>
                 <div class="filterPrice">
                     PRICE
-                    <img src="/static/img/filterArrow.svg" alt="">
+                    <img src="{% static 'img/filterArrow.svg' %}" alt="">
                 </div>
             </div>
         </div>
@@ -155,10 +154,10 @@
         <div class="featuredItems">
             <div class="featuredItem">
                 <div class="featuredImgWrap">
-                    <img src="/static/img/featured/1.jpg" alt="Product 1">
+                    <img src="{% static 'img/featured/1.jpg' %}" alt="Product 1">
                     <div class="featuredImgDark">
                         <button data-productId="1">
-                            <img src="/static/img/cart.svg" alt="">
+                            <img src="{% static 'img/cart.svg' %}" alt="">
                             Add to Cart
                         </button>
                     </div>
@@ -180,10 +179,10 @@
 
             <div class="featuredItem">
                 <div class="featuredImgWrap">
-                    <img src="/static/img/featured/2.jpg" alt="Product 2">
+                    <img src="{% static 'img/featured/2.jpg' %}" alt="Product 2">
                     <div class="featuredImgDark">
                         <button data-productId="2">
-                            <img src="/static/img/cart.svg" alt="">
+                            <img src="{% static 'img/cart.svg' %}" alt="">
                             Add to Cart
                         </button>
                     </div>
@@ -205,10 +204,10 @@
 
             <div class="featuredItem">
                 <div class="featuredImgWrap">
-                    <img src="/static/img/featured/3.jpg" alt="Product 3">
+                    <img src="{% static 'img/featured/3.jpg' %}" alt="Product 3">
                     <div class="featuredImgDark">
                         <button data-productId="3">
-                            <img src="/static/img/cart.svg" alt="">
+                            <img src="{% static 'img/cart.svg' %}" alt="">
                             Add to Cart
                         </button>
                     </div>
@@ -230,10 +229,10 @@
 
             <div class="featuredItem">
                 <div class="featuredImgWrap">
-                    <img src="/static/img/featured/4.jpg" alt="Product 4">
+                    <img src="{% static 'img/featured/4.jpg' %}" alt="Product 4">
                     <div class="featuredImgDark">
                         <button data-productId="4">
-                            <img src="/static/img/cart.svg" alt="">
+                            <img src="{% static 'img/cart.svg' %}" alt="">
                             Add to Cart
                         </button>
                     </div>
@@ -255,10 +254,10 @@
 
             <div class="featuredItem">
                 <div class="featuredImgWrap">
-                    <img src="/static/img/featured/5.jpg" alt="Product 5">
+                    <img src="{% static 'img/featured/5.jpg' %}" alt="Product 5">
                     <div class="featuredImgDark">
                         <button data-productId="5">
-                            <img src="/static/img/cart.svg" alt="">
+                            <img src="{% static 'img/cart.svg' %}" alt="">
                             Add to Cart
                         </button>
                     </div>
@@ -280,10 +279,10 @@
 
             <div class="featuredItem">
                 <div class="featuredImgWrap">
-                    <img src="/static/img/featured/6.jpg" alt="Product 6">
+                    <img src="{% static 'img/featured/6.jpg' %}" alt="Product 6">
                     <div class="featuredImgDark">
                         <button data-productId="6">
-                            <img src="/static/img/cart.svg" alt="">
+                            <img src="{% static 'img/cart.svg' %}" alt="">
                             Add to Cart
                         </button>
                     </div>
@@ -307,7 +306,7 @@
 
         <div class="pagination">
             <a href="#">
-                <img src="/static/img/chevronLeft.svg" alt="">
+                <img src="{% static 'img/chevronLeft.svg' %}" alt="">
             </a>
             <a href="#">1</a>
             <a href="#">2</a>
@@ -316,7 +315,7 @@
             <a href="#">5</a>
             <a href="#">6.....20</a>
             <a href="#">
-                <img src="/static/img/chevronRight.svg" alt="">
+                <img src="{% static 'img/chevronRight.svg' %}" alt="">
             </a>
         </div>
     </div>
@@ -325,7 +324,7 @@
         <div class="container">
 
             <div class="serivceUnit">
-                <img src="/static/img/services/delivery.svg" alt="">
+                <img src="{% static 'img/services/delivery.svg' %}" alt="">
                 <div class="servicesTitle">
                     Free Delivery
                 </div>
@@ -335,7 +334,7 @@
             </div>
 
             <div class="serivceUnit">
-                <img src="/static/img/services/discount.svg" alt="">
+                <img src="{% static 'img/services/discount.svg' %}" alt="">
                 <div class="servicesTitle">
                     Sales & discounts
                 </div>
@@ -345,7 +344,7 @@
             </div>
 
             <div class="serivceUnit">
-                <img src="/static/img/services/assurance.svg" alt="">
+                <img src="{% static 'img/services/assurance.svg' %}" alt="">
                 <div class="servicesTitle">
                     Quality assurance
                 </div>
@@ -360,7 +359,7 @@
         <div class="container">
 
             <div class="subscribeLeft">
-                <img src="/static/img/subscribeUser.png" alt="">
+                <img src="{% static 'img/subscribeUser.png' %}" alt="">
                 <div class="subscribeUserText">
                     “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
                 </div>
@@ -399,13 +398,13 @@
                 </a>
             </div>
             <div class="footerRight">
-                &copy; 2021 Brand All Rights Reserved.
+                &copy; {% now "Y" %} Brand All Rights Reserved.
             </div>
         </div>
     </div>
 
-    <script src="/app.js"></script>
-    <script src="/basket.js"></script>
+    <script src="{% static 'app.js' %}"></script>
+    <script src="{% static 'basket.js' %}"></script>
 </body>
 
 </html>
