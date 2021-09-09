@@ -23,6 +23,8 @@ urlpatterns = [
     path('shop/', include('mainapp.urls')),
     path('admin/', admin.site.urls,),
     path('', mainapp.main, name='main'),
+    path('auth/', include('authapp.urls', namespace='auth')),
+
 ]
 
 if settings.DEBUG:

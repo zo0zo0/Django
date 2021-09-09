@@ -5,10 +5,11 @@ from mainapp.models import Product
 
 
 def main(requests):
-    title = 'Главная'
-    products = Product.object.all()
-    content = {"title": title, 'products': products}
-    return render(requests, 'mainapp/index.html', content)
+    #title = 'Главная'
+    #products = Product.object.all()
+    #content = {"title": title, 'products': products}
+    #return render(requests, 'mainapp/index.html', content)
+    return render(requests, 'mainapp/index.html')
 
 def products(requests):
     return render(requests, 'mainapp/products.html')
