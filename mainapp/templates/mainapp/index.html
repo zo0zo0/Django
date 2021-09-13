@@ -18,7 +18,7 @@
             <div class="topheader">
                 <div class="header">
                     <div class="topmenu">
-                        {% include 'mainapp/base.html' %}
+                        {% include 'mainapp/head_links.html' %}
                     </div>
                     <div class="lastheader">
                         <h1 class="h1class">New Automation
@@ -148,16 +148,16 @@
         </div>
         <div>
             {% for product in products %}
-            <div class="block">
+              <div class="block">
                 <a href="#">
-                    <img scr="/media/{{ product.image }}" alt="{{ product.short_desc }}">
-                    <div class="text">
-                        <h3>{{ product.category.name }}</h3>
-                        <h4>{{ product.name }}</h4>
-                        <p>{{ product.description }}</p>
-                    </div>
+                  <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+                  <div class="text">
+                    <h3>{{ product.category.name }}</h3>
+                    <h4>{{ product.name }}</h4>
+                    <p>{{ product.description }}</p>
+                  </div>
                 </a>
-            </div>
+              </div>
             {% endfor %}
         </div>
     </div>
