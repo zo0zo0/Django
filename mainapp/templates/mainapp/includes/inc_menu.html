@@ -1,6 +1,6 @@
 <a href="{% url 'main' %}" class="logo"></a>
 <ul class="menu">
-...
+
 </ul>
 <a href="#" class="search"></a>
 <a href="{% url 'basket:view' %}" class="basket">
@@ -18,3 +18,23 @@
     {% endif %}
   </span>
 </a>
+
+  {% if user.is_authenticated %}
+    <li>
+      <a href="{% url 'auth:edit' %}">
+        {{ user.first_name|default:'Пользователь' }}
+      </a>
+    </li>
+  {% endif %}
+  {% if user.is_superuser %}
+    <li>
+      <a href="{% url 'admin:users' %}">админка</a>
+    </li>
+  {% endif %}
+  <li>
+    {% if user.is_authenticated %}
+      <a href="{% url 'auth:logout' %}">выйти</a>
+    {% else %}
+      <a href="{% url 'auth:login' %}">войти</a>
+    {% endif %}
+  </li>
