@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -6,19 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body class="container">
     <div class="topmenu">
-                        <a href="/" class="block_href1"><img src="/static/img/Circles.png" alt="Main Page"></a>
-                        <a href="/products/" class="block_href1"><img height="40px" width="40px" src="/static/img/shops.png" alt="Shop"></a>
-                        <a href="/contacts/" class="block_href2"><img src="/static/img/contacts.png" alt="Contacts"></a>
+        {% include 'mainapp/head_links.html' %}
     </div>
 
     <h2 class="h2class">Contact Us</h2>
     <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ratione.</p>
-    <img src="/static/img/funnycat.jpg" width="350px" height="350px" alt="cat">
+    <img src="{% static 'img/funnycat.jpg' %}" width="350px" height="350px" alt="cat">
     <div class="contacts_and_form">
         <div class="contacts">
             <h4 class="h4class">Address</h4>
@@ -58,9 +57,9 @@
         Номер телефона: <input class="inpt-area" type="phone" placeholder="+79998887766"><br>
         Email: <input class="inpt-area" type="email" placeholder="mail@mail.com">
         <button class="button" type="submit">Подписаться</button>
-        < class="button" type="reset">Стересть данные в форме</button>
+        <button class="button" type="reset">Стересть данные в форме</button>
     </form>
-    <p class="paragraph"><b>Все права защищены</b> &copy;</p>
+    <p class="paragraph"><b>Все права защищены {% now "Y" %}</b> &copy;</p>
 </body>
 
 </html>
