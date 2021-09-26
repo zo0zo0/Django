@@ -4,6 +4,7 @@ from django.template.defaultfilters import title
 import random
 from basketapp.models import Basket
 from .models import ProductCategory, Product
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 
@@ -13,7 +14,7 @@ def main(request):
     content = {'title': title, 'products': products}
     return render(request, 'mainapp/index.html', content)
 
-def products(request, pk=None):
+'''def products(request, pk=None):
         title = 'продукты'
         links_menu = ProductCategory.objects.all()
 
@@ -41,7 +42,43 @@ def products(request, pk=None):
             'links_menu': links_menu,
             'same_products': same_products
         }
-        return render(request, 'mainapp/products.html', content)
+        return render(request, 'mainapp/products.html', content)'''
+
+
+def products(request, pk=None, page=1):
+    title = 'продукты'
+    links_menu = ProductCategory.objects.filter(is_active=True)
+    basket = getBasket(request.user)
+
+    if pk is not None:
+        if pk == 0:
+            category = {
+                'pk': 0,
+                'name': 'все'
+            }
+            products = Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
+        else:
+            category = get_object_or_404(ProductCategory, pk=pk)
+            products = Product.objects.filter(category__pk=pk, is_active=True,
+                                              category__is_active=True).order_by('price')
+
+        paginator = Paginator(products, 2)
+        try:
+            products_paginator = paginator.page(page)
+        except PageNotAnInteger:
+            products_paginator = paginator.page(1)
+        except EmptyPage:
+            products_paginator = paginator.page(paginator.num_pages)
+
+        content = {
+            'title': title,
+            'links_menu': links_menu,
+            'category': category,
+            'products': products_paginator,
+            'basket': basket,
+        }
+
+        return render(request, 'mainapp/products_list.html', content)
 
 
 def contacts(requests):
